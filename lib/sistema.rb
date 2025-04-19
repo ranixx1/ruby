@@ -1,3 +1,4 @@
+# Sistema Bancário Simples
 saldo = 0.0  # Variável para armazenar o saldo da conta
 senha_cadastrada = nil
 
