@@ -1,7 +1,7 @@
 puts "insira um numero:"
-x = gets.chomp.to_i
+x = gets.chomp.to_i #input do usuario
 puts "insira outro numero"
-y = gets.chomp.to_i
+y = gets.chomp.to_i #input do usuario
 
 
 
