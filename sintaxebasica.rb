@@ -71,3 +71,68 @@ end
 
 pessoa = Pessoa.new("Lucas", 30) #new cria uma nova instância da classe
 pessoa.apresentar
+
+pessoas = [Pessoa.new("Ricardo",19),
+          Pessoa.new(idade=25)]
+puts pessoas[0] # posição 0
+puts pessoas[1] # posição 1
+puts pessoas[0] > pessoas[1] #o mesmo que: pessoas[0].>(pessoas[1])
+
+# Classe aberta
+class string
+  def iniciais
+    ini= String.new
+
+    for nome in self.split do
+      ini +=nome[0]
+    end
+
+    return ini 
+  end
+end
+puts "Ranilton Costa de Lima".iniciais #RCL
+puts "ranilton costa de lima".iniciais.upcase #RCL
+
+# Herança
+
+class Mamifero
+  def respira
+    puts "inspira e expira"
+  end
+end
+
+class Gato < Mamifero
+  def fala
+    puts "Miauuu"
+  end
+end
+rani = Gato.new
+rani.respira
+rani.fala
+
+#caso herança
+
+class Ave
+  def limpa
+    puts"Estou limpando minhas penas."
+  end
+  def voa
+    puts"Estou voando."
+  end
+end
+
+class Pinguim < Ave
+  def voa 
+    puts"Desculpa. Prefiro nadar."
+  end
+end
+
+puts "*** Pinguim ***"
+pinguim = Pinguim.new
+pinguim.limpa
+pinguim.voa
+puts "*** Outra ave ***"
+ave= Ave.new
+ave.limpa
+ave.voa
+
