@@ -136,3 +136,69 @@ ave= Ave.new
 ave.limpa
 ave.voa
 
+class GF
+  @m = 10
+  puts @m.object_id
+  def initialize
+    puts 'na classe GF'
+  end
+
+  def gfmethod
+    puts 'chamada de metodo de GF'
+    end
+end
+# classe F, subclasse de GF
+class F< GF
+  def initialize
+    super
+    puts 'na classe F'
+  end
+end
+# classe S, subclasse de F
+class S < F
+  def initialize
+    super
+    puts @m
+    puts @m.object_id
+    puts 'Na classe S'
+  end
+end
+
+filho = S.new
+filho = gfmethod
+
+
+#Variaveis de instância
+class Cachorro
+  def initialize(raca)
+    @raca = raca
+  end
+end
+class CartaoVacina < Cachorro
+  def initialize(raca, nome)
+    super(raca)
+    @nome = nome
+  end
+
+  def to_s
+    "(#@raca, #@nome)"
+  end
+end
+puts CartaoVacina.new("Labrador", "Benzy").to_s
+
+#encapsulamento
+class Pessoa
+  attr :nome, :nascimento, :cpf
+  def metodoPublico end
+
+  protected
+    def metodoProtegido end
+    def outroMetodoProtegido end
+  
+  private
+    def metodoPrivado end
+    def outroMetodoPrivado end
+  
+  public
+    def deNovoMetodoPublico end
+end
