@@ -5,12 +5,10 @@ Este repositório contém arquivos de prática para aprender Ruby, organizados p
 ## Estrutura
 
 ```
-lib/                # Código-fonte Ruby
-├── calculadora.rb
-├── numeros.rb
-├── sistema.rb
-├── sistemav2.rb
-└── condicionais/
+src/                    # Código-fonte Ruby
+├── arrays/             # Exemplos e exercícios com arrays
+├── projects/           # Projetos testes
+└── condicionais/       # Estruturas condicionais em Ruby
     ├── booleanos.rb
     ├── if.rb
     ├── case_when.rb
@@ -18,15 +16,29 @@ lib/                # Código-fonte Ruby
     ├── ternario.rb
     └── comparacoes.rb
 
-
-hello.rb            # primeiro código
-sintaxebasica.rb    # resumo
+hello.rb                # Primeiro código Ruby (Hello World)
+sintaxebasica.rb        # Resumo da sintaxe básica
 ```
 
 ## Como usar
 
-Execute o arquivo que quiser com:
+Execute qualquer arquivo Ruby com:
 
 ```bash
-ruby NOME.rb
+ruby CAMINHO/DO/ARQUIVO.rb
 ```
+
+Por exemplo:
+
+```bash
+ruby src/condicionais/if.rb
+```
+
+## Recomendações
+
+- Comece por `hello.rb` para testar seu ambiente.
+- Explore os exemplos em `src/` para aprender diferentes conceitos.
+- Modifique os arquivos e crie novos exemplos para praticar.
+
+---
+> Este projeto é para fins de estudo
